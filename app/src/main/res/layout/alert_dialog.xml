@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:elevation="2dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#d6b685">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:layout_gravity="center"
+            android:textSize="26sp"
+            android:fontFamily="@font/flame_bold"
+            android:textColor="#583924"
+            android:textStyle="normal"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue?"
+            android:textSize="16sp"
+            android:fontFamily="@font/flame_bold"
+            android:textColor="#583924"
+            android:textStyle="normal"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_yes"
+                android:layout_width="90dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/next_btn"
+                android:elevation="3dp"
+                android:fontFamily="@font/flame_bold"
+                android:gravity="center"
+                android:outlineAmbientShadowColor="#d6b685"
+                android:outlineSpotShadowColor="#96775d"
+                android:text="yes"
+                android:textColor="#fff2cc"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="UnusedAttribute" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_no"
+                android:layout_width="90dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/next_btn"
+                android:elevation="3dp"
+                android:fontFamily="@font/flame_bold"
+                android:gravity="center"
+                android:outlineAmbientShadowColor="#d6b685"
+                android:outlineSpotShadowColor="#96775d"
+                android:text="no"
+                android:textColor="#fff2cc"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UnusedAttribute" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
