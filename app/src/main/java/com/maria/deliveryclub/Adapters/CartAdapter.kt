@@ -24,6 +24,33 @@ class CartAdapter(
         holder.foodName.text = listModel.getFoodName()
         holder.foodPrice.text = listModel.getFoodPrice()
         listModel.getFoodImage()?.let { holder.foodImage.setImageResource(it) }
+
+        holder.plus.setOnClickListener {
+            if (listModel.getFoodCount() < 10) {
+                val count = listModel.getFoodCount() + 1
+                listModel.setFoodCount(count)
+                holder.foodCount.text = listModel.getFoodCount().toString()
+            }
+        }
+
+        holder.minus.setOnClickListener {
+            if (listModel.getFoodCount() > 1)
+            {
+                val count = listModel.getFoodCount() - 1
+                listModel.setFoodCount(count)
+                holder.foodCount.text = listModel.getFoodCount().toString()
+            }
+            else
+            {
+                holder.bindItem()
+            }
+
+
+
+        }
+        holder.deleteBtn.setOnClickListener {
+            holder.bindItem()
+        }
     }
 
     override fun getItemCount(): Int {
@@ -34,8 +61,26 @@ class CartAdapter(
         val foodImage = binding.homeFoodImage
         val foodName = binding.homeFoodName
         val foodPrice = binding.homeFoodPrice
+        val foodCount = binding.foodCount
         val plus = binding.plusBtn
         val minus = binding.minusBtn
+
+        val deleteBtn = binding.deleteBtn
+
+        fun bindItem(){
+            if (adapterPosition != RecyclerView.NO_POSITION)
+            {
+                deleteItem(adapterPosition)
+            }
+        }
+
+        fun deleteItem(position: Int) {
+            if (position in 0.. list . size) {
+                list.removeAt(position)
+                notifyDataSetChanged()
+                notifyItemRangeChanged(position, list.size)
+            }
+        }
 
     }
 }

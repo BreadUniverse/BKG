@@ -5,15 +5,26 @@ class PopularModel {
     private var foodImage : Int? = null
     private var foodName : String = ""
     private var foodPrice : String = ""
+    private var foodCount : Int = 1
+
 
     constructor()
-    constructor(foodImage: Int?, foodName: String, foodPrice: String) {
+    constructor(foodImage: Int?, foodName: String, foodPrice: String, foodCount : Int) {
         this.foodImage = foodImage
         this.foodName = foodName
         this.foodPrice = foodPrice
+        this.foodCount = foodCount
     }
 
-     fun getFoodImage() : Int? {
+    fun getFoodCount() : Int{
+        return foodCount
+    }
+
+    fun setFoodCount(foodCount: Int){
+        this.foodCount = foodCount
+    }
+
+    fun getFoodImage() : Int? {
         return foodImage
     }
 

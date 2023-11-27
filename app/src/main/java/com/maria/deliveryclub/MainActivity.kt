@@ -2,6 +2,7 @@ package com.maria.deliveryclub
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -19,6 +20,18 @@ class MainActivity : AppCompatActivity() {
         val bottomNavView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navigationView = findNavController(R.id.fragment_container)
 
+        //val navController = findNavController(R.id.mainContainer)
+
+        //val notification_btn = findViewById<ImageView>(R.id.bell_notification)
+
+        //notification_btn.setOnClickListener {
+            //val bottomSheetDialogFragment = notification_bottom_fragment()
+            //bottomSheetDialogFragment.show(supportFragmentManager, "Test")
+            //bottomNavView.setupWithNavController(navController)
+        //}
+
+
         bottomNavView.setupWithNavController(navigationView)
     }
+
 }

@@ -13,6 +13,24 @@
         android:theme="@style/Theme.DeliveryClub"
         tools:targetApi="31">
         <activity
+            android:name=".DispatcherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivityDispatcher"
+            android:exported="false" />
+        <activity
+            android:name=".LoginDispatcherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivityCourier"
+            android:exported="false" />
+        <activity
+            android:name=".CourierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginCourierActivity"
+            android:exported="false" />
+        <activity
             android:name=".LocationActivity"
             android:exported="false" />
         <activity

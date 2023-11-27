@@ -20,5 +20,17 @@ class StartActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        binding.goCourierBtn.setOnClickListener {
+            val intent = Intent(this@StartActivity, LoginCourierActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.goDispatcherBtn.setOnClickListener {
+            val intent = Intent(this@StartActivity, LoginDispatcherActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

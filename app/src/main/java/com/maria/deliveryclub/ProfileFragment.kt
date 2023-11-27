@@ -22,11 +22,15 @@ class ProfileFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
+
+
         view.findViewById<ImageView>(R.id.image_log_out).setOnClickListener{
-            val intent = Intent(activity, LoginUserActivity::class.java)
+            val intent = Intent(activity, StartActivity::class.java)
             startActivity(intent)
         }
 
         return view
     }
+
+
 }

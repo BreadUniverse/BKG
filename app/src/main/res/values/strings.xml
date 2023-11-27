@@ -3,4 +3,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image_log_out">lalala</string>
     <string name="todo">TODO</string>
+    <string name="plus_btn">lalala</string>
+    <string name="minus_btn">lalala</string>
+    <string name="delete_btn">lalla</string>
 </resources>

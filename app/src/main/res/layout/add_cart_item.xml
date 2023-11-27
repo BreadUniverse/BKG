@@ -37,7 +37,7 @@
             android:id="@+id/home_food_name"
             android:layout_width="89dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="24dp"
             android:layout_marginBottom="32dp"
             android:fontFamily="@font/flame_bold"
             android:text="Burger"
@@ -46,7 +46,8 @@
             android:textStyle="normal"
             app:layout_constraintBottom_toBottomOf="@+id/cardView"
             app:layout_constraintStart_toEndOf="@+id/cardView"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.891" />
 
         <TextView
             android:id="@+id/home_food_price"
@@ -64,10 +65,11 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/plus_btn"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginEnd="70dp"
             android:background="@drawable/ic_plus"
+            android:contentDescription="@string/plus_btn"
             app:layout_constraintBottom_toBottomOf="@+id/minus_btn"
             app:layout_constraintEnd_toStartOf="@+id/minus_btn"
             app:layout_constraintTop_toTopOf="@+id/minus_btn"
@@ -75,23 +77,28 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/minus_btn"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="6dp"
             android:background="@drawable/ic_minus"
+            android:contentDescription="@string/minus_btn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/home_food_name" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/delete_btn"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
 
             android:background="@drawable/ic_trush"
+            android:contentDescription="@string/delete_btn"
             app:layout_constraintBottom_toBottomOf="@+id/home_food_price"
             app:layout_constraintEnd_toEndOf="@+id/minus_btn"
+            app:layout_constraintHorizontal_bias="0.516"
             app:layout_constraintStart_toStartOf="@+id/plus_btn"
-            app:layout_constraintTop_toTopOf="@+id/home_food_price" />
+            app:layout_constraintTop_toTopOf="@+id/home_food_price"
+            app:layout_constraintVertical_bias="0.411" />
 
         <TextView
             android:id="@+id/food_count"
@@ -103,7 +110,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/minus_btn"
-            app:layout_constraintEnd_toStart0f="@+id/minus_btn"
             app:layout_constraintEnd_toStartOf="@+id/minus_btn"
             app:layout_constraintStart_toEndOf="@+id/plus_btn"
             app:layout_constraintTop_toTopOf="@+id/minus_btn" />

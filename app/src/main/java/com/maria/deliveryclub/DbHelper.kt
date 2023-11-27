@@ -37,4 +37,43 @@ class DbHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         return result.moveToFirst()
     }
 
+    fun addCourier(courier: Courier) {
+        val values = ContentValues()
+        values.put("login", courier.login)
+        values.put("email", courier.email)
+        values.put("pass", courier.pass)
+
+        val db = this.writableDatabase
+        db.insert("users", null, values)
+
+        db.close()
     }
+
+    fun getCourier(login: String, pass: String): Boolean {
+        val db = this.readableDatabase
+
+        val result = db.rawQuery("SELECT * FROM users  WHERE login = '$login' AND pass = '$pass'", null)
+        return result.moveToFirst()
+    }
+
+    fun addDispatcher(dispatcher: Dispatcher) {
+        val values = ContentValues()
+        values.put("login", dispatcher.login)
+        values.put("email", dispatcher.email)
+        values.put("pass", dispatcher.pass)
+
+        val db = this.writableDatabase
+        db.insert("users", null, values)
+
+        db.close()
+    }
+
+    fun getDispatcher(login: String, pass: String): Boolean {
+        val db = this.readableDatabase
+
+        val result = db.rawQuery("SELECT * FROM users  WHERE login = '$login' AND pass = '$pass'", null)
+        return result.moveToFirst()
+    }
+
+
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9E6"
+    tools:ignore="ExtraText"
+    tools:context=".SignUpActivityDispatcher">
+
+
+    <ImageView
+        android:id="@+id/burgercrown"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="85dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/burgercrown" />
+
+    <TextView
+        android:id="@+id/taste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TASTE IS KING"
+        android:fontFamily="@font/insani_bc"
+        android:textColor="#583924"
+        android:textSize="40sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/burgercrown" />
+
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/flame_bold"
+        android:text="Deliver Favorite Food"
+        android:textColor="#583924"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taste" />
+
+    <TextView
+        android:id="@+id/tw8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/insani_bc"
+        android:text="Sign Up"
+        android:textColor="#0066B2"
+        android:textSize="22sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv7" />
+
+    <EditText
+        android:id="@+id/sign_up_dispatcher_email"
+        android:layout_width="330dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="Email"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#583924"
+        android:textColorHint="	#96775d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dispatcher_name" />
+
+    <EditText
+        android:id="@+id/sign_up_dispatcher_pass"
+        android:layout_width="330dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="Password"
+        android:textColor="#583924"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#96775d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_dispatcher_email" />
+
+    <TextView
+        android:id="@+id/go_login_dispatcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/lato"
+        android:text="Already have an account?"
+        android:textColor="#583924"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_dispatcher_sgn_up" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_dispatcher_sgn_up"
+        android:layout_width="160dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/next_btn"
+        android:elevation="3dp"
+        android:fontFamily="@font/flame_bold"
+        android:gravity="center"
+        android:outlineAmbientShadowColor="#d6b685"
+        android:outlineSpotShadowColor="#96775d"
+        android:text="Sign Up"
+        android:textColor="#fff2cc"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_dispatcher_pass"
+        tools:targetApi="p"/>
+
+    <EditText
+        android:id="@+id/dispatcher_name"
+        android:layout_width="330dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="Name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#583924"
+        android:textColorHint="#96775d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

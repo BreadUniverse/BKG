@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView.OnQueryTextListener
 import androidx.appcompat.widget.SearchView
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.maria.deliveryclub.Adapters.PopularAdapter
 import com.maria.deliveryclub.Models.PopularModel
+import com.maria.deliveryclub.Models.SharedModel
 import com.maria.deliveryclub.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {
@@ -17,6 +19,8 @@ class SearchFragment : Fragment() {
     private lateinit var binding : FragmentSearchBinding
     private lateinit var adapter : PopularAdapter
     private lateinit var list: ArrayList<PopularModel>
+
+    private lateinit var sharedModel: SharedModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,20 +33,24 @@ class SearchFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentSearchBinding.inflate(inflater, container, false)
 
+        sharedModel = ViewModelProvider(requireActivity()).get(SharedModel::class.java)
+
+
         list = ArrayList()
-        list.add(PopularModel(R.drawable.pop_menu_momo, "Burger", "4$"))
-        list.add(PopularModel(R.drawable.pop_menu_sandwich, "Hinkali", "7$"))
-        list.add(PopularModel(R.drawable.pop_menu_burger, "Sandwich", "3$"))
-        list.add(PopularModel(R.drawable.pop_menu_momo, "Burger", "4$"))
-        list.add(PopularModel(R.drawable.pop_menu_sandwich, "Hinkali", "7$"))
-        list.add(PopularModel(R.drawable.pop_menu_burger, "Sandwich", "3$"))
-        list.add(PopularModel(R.drawable.pop_menu_momo, "Burger", "4$"))
-        list.add(PopularModel(R.drawable.pop_menu_sandwich, "Hinkali", "7$"))
-        list.add(PopularModel(R.drawable.pop_menu_burger, "Sandwich", "3$"))
+        list.add(PopularModel(R.drawable.pop_menu_momo, "Burger", "4$", 1))
+        list.add(PopularModel(R.drawable.pop_menu_sandwich, "Hinkali", "7$", 1))
+        list.add(PopularModel(R.drawable.pop_menu_burger, "Sandwich", "3$", 1))
+        list.add(PopularModel(R.drawable.pop_menu_momo, "Burger", "4$", 1))
+        list.add(PopularModel(R.drawable.pop_menu_sandwich, "Hinkali", "7$", 1))
+        list.add(PopularModel(R.drawable.pop_menu_burger, "Sandwich", "3$", 1))
+        list.add(PopularModel(R.drawable.pop_menu_momo, "Burger", "4$", 1))
+        list.add(PopularModel(R.drawable.pop_menu_sandwich, "Hinkali", "7$", 1))
+        list.add(PopularModel(R.drawable.pop_menu_burger, "Sandwich", "3$", 1))
 
 
 
         adapter = PopularAdapter(requireContext(), list)
+        adapter.setSharedModel(sharedModel)
 
         binding.searchMenuRv.layoutManager = LinearLayoutManager(requireContext())
         binding.searchMenuRv.adapter = adapter
