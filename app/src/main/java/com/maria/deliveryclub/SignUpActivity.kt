@@ -3,6 +3,7 @@ package com.maria.deliveryclub
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -21,6 +22,7 @@ class SignUpActivity : AppCompatActivity() {
         val userEmail: EditText = findViewById(R.id.sign_up_user_email)
         val userPass: EditText = findViewById(R.id.sign_up_user_pass)
 
+
         binding.goLoginUser.setOnClickListener {
             val intent = Intent(this@SignUpActivity, LoginUserActivity::class.java)
             startActivity(intent)
@@ -31,6 +33,7 @@ class SignUpActivity : AppCompatActivity() {
             val login = userLogin.text.toString().trim()
             val email = userEmail.text.toString().trim()
             val pass = userPass.text.toString().trim()
+
 
             if(login == "" || email == "" || pass == "")
                 Toast.makeText(this, "Заполните все поля", Toast.LENGTH_LONG).show()
@@ -51,5 +54,8 @@ class SignUpActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+
+
     }
 }

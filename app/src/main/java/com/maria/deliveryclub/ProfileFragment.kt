@@ -7,9 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
-import com.maria.deliveryclub.databinding.ActivityLoginUserBinding
+
 
 class ProfileFragment : Fragment() {
 
@@ -20,23 +18,15 @@ class ProfileFragment : Fragment() {
     }
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
-    }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
-    fun onImageClick(imageView: ImageView) {
-        // Создаем Intent для перехода в новую Activity
-        val intent = Intent(activity, LoginUserActivity::class.java)
+        view.findViewById<ImageView>(R.id.image_log_out).setOnClickListener{
+            val intent = Intent(activity, LoginUserActivity::class.java)
+            startActivity(intent)
+        }
 
-        // Дополнительные параметры, если необходимо
-        // intent.putExtra("key", "value")
-
-        // Запускаем новую Activity
-        startActivity(intent)
-
+        return view
     }
 }

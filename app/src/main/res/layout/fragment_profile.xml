@@ -16,7 +16,6 @@
         android:clickable="true"
         android:contentDescription="@string/image_log_out"
         android:focusable="true"
-        android:onClick="onImageClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

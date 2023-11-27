@@ -11,7 +11,7 @@ import com.maria.deliveryclub.databinding.HomeFoodBinding
 
 class PopularAdapter(
     val context : Context,
-    val list : ArrayList<PopularModel>
+    var list : ArrayList<PopularModel>
 ) : RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
 
 
@@ -39,5 +39,12 @@ class PopularAdapter(
         val foodImage = binding.homeFoodImage
         val foodName = binding.homeFoodName
         val foodPrice = binding.homeFoodPrice
+
+        val item = binding.root
+    }
+
+    fun updateList(newList : ArrayList<PopularModel>){
+        list = newList
+        notifyDataSetChanged()
     }
 }

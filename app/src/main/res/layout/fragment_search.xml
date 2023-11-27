@@ -7,12 +7,13 @@
     tools:context=".SearchFragment">
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_menu"
+        android:id="@+id/search_menu_item"
         android:layout_width="0dp"
         android:layout_height="72dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
+        app:queryBackground="@android:color/transparent"
         android:background="@drawable/menu_search"
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,9 +33,9 @@
         android:textColor="#583924"
         android:textSize="24sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="@+id/search_menu"
-        app:layout_constraintStart_toStartOf="@+id/search_menu"
-        app:layout_constraintTop_toBottomOf="@+id/search_menu" />
+        app:layout_constraintEnd_toEndOf="@+id/search_menu_item"
+        app:layout_constraintStart_toStartOf="@+id/search_menu_item"
+        app:layout_constraintTop_toBottomOf="@+id/search_menu_item" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/search_menu_rv"
