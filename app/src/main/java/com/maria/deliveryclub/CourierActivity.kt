@@ -21,5 +21,7 @@ class CourierActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+
     }
 }
