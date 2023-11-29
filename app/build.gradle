@@ -39,7 +39,7 @@ android {
 
 dependencies {
 
-    implementation 'ru.yoomoney.sdk.kassa.payments:yookassa-android-sdk:6.9.0'
+    implementation 'com.yandex.android:maps.mobile:4.4.0-lite'
     implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.10.0'

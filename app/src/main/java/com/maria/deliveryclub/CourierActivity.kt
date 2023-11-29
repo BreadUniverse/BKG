@@ -22,6 +22,11 @@ class CourierActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.toMapsBtn.setOnClickListener {
+            val intent = Intent(this@CourierActivity, MapsActivity::class.java)
+            startActivity(intent)
+            finish()
 
+        }
     }
 }

@@ -34,5 +34,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/image_log_out" />
 
+    <Button
+        android:id="@+id/to_maps_btn"
+        android:layout_width="185dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#67442C"
+        android:elevation="3dp"
+        android:fontFamily="@font/flame_bold"
+        android:gravity="center"
+        android:outlineAmbientShadowColor="#d6b685"
+        android:outlineSpotShadowColor="#96775d"
+        android:text="Yandex Maps"
+        android:textAllCaps="true"
+        android:textColor="#fff2cc"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
