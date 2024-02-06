@@ -1,10 +1,13 @@
-package com.maria.deliveryclub
+package com.maria.deliveryclub.Users
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
+import com.maria.deliveryclub.Db.DbHelper
+import com.maria.deliveryclub.MainActivity
+import com.maria.deliveryclub.R
 import com.maria.deliveryclub.databinding.ActivityLoginUserBinding
 
 class LoginUserActivity : AppCompatActivity() {
@@ -16,7 +19,7 @@ class LoginUserActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val userLogin: EditText = findViewById(R.id.sign_in_user_email)
+        val userLogin: EditText = findViewById(R.id.sign_in_user_login)
         val userPass: EditText = findViewById(R.id.sign_in_user_pass)
 
         binding.goSignupUser.setOnClickListener {

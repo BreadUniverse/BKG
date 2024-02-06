@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF9E6"
-    tools:context=".LoginUserActivity"
+    tools:context=".Users.LoginUserActivity"
     tools:ignore="ExtraText">
 
     <ImageView
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:fontFamily="@font/insani_bc"
-        android:text="Log In"
+        android:text="Log In As Client"
         android:textColor="#0066B2"
         android:textSize="22sp"
         android:textStyle="normal"
@@ -59,14 +59,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/sign_in_user_email"
+        android:id="@+id/sign_in_user_login"
         android:layout_width="330dp"
         android:layout_height="65dp"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:fontFamily="@font/lato"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
+        android:hint="Login"
+        android:inputType="text"
         android:minHeight="48dp"
         android:textColor="#583924"
         android:textColorHint="	#96775d"
@@ -88,7 +88,7 @@
         android:textColorHint="#96775d"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_user_email" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_user_login" />
 
     <TextView
         android:id="@+id/go_signup_user"

@@ -1,4 +1,4 @@
-package com.maria.deliveryclub
+package com.maria.deliveryclub.Db
 
 import android.content.ContentValues
 import android.content.Context

@@ -1,12 +1,14 @@
-package com.maria.deliveryclub
+package com.maria.deliveryclub.Users
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
+import com.maria.deliveryclub.CourierActivity
+import com.maria.deliveryclub.Db.DbHelper
+import com.maria.deliveryclub.R
 import com.maria.deliveryclub.databinding.ActivityLoginCourierBinding
-import com.maria.deliveryclub.databinding.ActivityLoginUserBinding
 
 class LoginCourierActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginCourierBinding
@@ -16,8 +18,8 @@ class LoginCourierActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val userLogin: EditText = findViewById(R.id.sign_in_courier_email)
-        val userPass: EditText = findViewById(R.id.sign_in_courier_email)
+        val userLogin: EditText = findViewById(R.id.sign_in_courier_login)
+        val userPass: EditText = findViewById(R.id.sign_in_courier_pass)
 
         binding.goSignupCourier.setOnClickListener {
             val intent = Intent(this@LoginCourierActivity, SignUpActivityCourier::class.java)

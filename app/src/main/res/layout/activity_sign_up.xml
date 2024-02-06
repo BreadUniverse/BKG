@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFF9E6"
     tools:ignore="ExtraText"
-    tools:context=".SignUpActivity">
+    tools:context=".Users.SignUpActivity">
 
 
     <ImageView
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:fontFamily="@font/insani_bc"
-        android:text="Sign Up"
+        android:text="Sign Up As client"
         android:textColor="#0066B2"
         android:textSize="22sp"
         android:textStyle="normal"

@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -22,28 +24,28 @@
             android:name=".DispatcherActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivityDispatcher"
+            android:name=".Users.SignUpActivityDispatcher"
             android:exported="false" />
         <activity
-            android:name=".LoginDispatcherActivity"
+            android:name=".Users.LoginDispatcherActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivityCourier"
+            android:name=".Users.SignUpActivityCourier"
             android:exported="false" />
         <activity
             android:name=".CourierActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginCourierActivity"
+            android:name=".Users.LoginCourierActivity"
             android:exported="false" />
         <activity
             android:name=".LocationActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".Users.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginUserActivity"
+            android:name=".Users.LoginUserActivity"
             android:exported="false" />
         <activity
             android:name=".StartActivity"

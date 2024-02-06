@@ -1,12 +1,14 @@
-package com.maria.deliveryclub
+package com.maria.deliveryclub.Users
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
+import com.maria.deliveryclub.Db.DbHelper
+import com.maria.deliveryclub.DispatcherActivity
+import com.maria.deliveryclub.R
 import com.maria.deliveryclub.databinding.ActivityLoginDispatcherBinding
-import com.maria.deliveryclub.databinding.ActivityLoginUserBinding
 
 class LoginDispatcherActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginDispatcherBinding
@@ -16,7 +18,7 @@ class LoginDispatcherActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val userLogin: EditText = findViewById(R.id.sign_in_dispatcher_email)
+        val userLogin: EditText = findViewById(R.id.sign_in_dispatcher_login)
         val userPass: EditText = findViewById(R.id.sign_in_dispatcher_pass)
 
         binding.goSignupDispatcher.setOnClickListener {
@@ -42,7 +44,8 @@ class LoginDispatcherActivity : AppCompatActivity() {
                     val intent = Intent(this@LoginDispatcherActivity, DispatcherActivity::class.java)
                     startActivity(intent)
                     finish()
-                } else
+                }
+                else
                     Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_LONG).show()
 
             }

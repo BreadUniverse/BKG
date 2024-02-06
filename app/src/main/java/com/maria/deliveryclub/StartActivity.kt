@@ -4,6 +4,9 @@ package com.maria.deliveryclub
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.maria.deliveryclub.Users.LoginCourierActivity
+import com.maria.deliveryclub.Users.LoginDispatcherActivity
+import com.maria.deliveryclub.Users.LoginUserActivity
 import com.maria.deliveryclub.databinding.ActivityStartBinding
 
 class StartActivity : AppCompatActivity() {

@@ -1,32 +1,36 @@
-package com.maria.deliveryclub
+package com.maria.deliveryclub.Users
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
+import com.maria.deliveryclub.Db.DbHelper
+import com.maria.deliveryclub.Db.User
+import com.maria.deliveryclub.LocationActivity
+import com.maria.deliveryclub.R
 import com.maria.deliveryclub.databinding.ActivitySignUpBinding
-import com.maria.deliveryclub.databinding.ActivitySignUpCourierBinding
 
-class SignUpActivityCourier : AppCompatActivity() {
-    private lateinit var binding: ActivitySignUpCourierBinding
+class SignUpActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySignUpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignUpCourierBinding.inflate(layoutInflater)
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val userLogin: EditText = findViewById(R.id.courier_name)
-        val userEmail: EditText = findViewById(R.id.sign_up_courier_email)
-        val userPass: EditText = findViewById(R.id.sign_up_courier_email)
+        val userLogin: EditText = findViewById(R.id.user_name)
+        val userEmail: EditText = findViewById(R.id.sign_up_user_email)
+        val userPass: EditText = findViewById(R.id.sign_up_user_pass)
 
 
-        binding.goLoginCourier.setOnClickListener {
-            val intent = Intent(this@SignUpActivityCourier, LoginCourierActivity::class.java)
+        binding.goLoginUser.setOnClickListener {
+            val intent = Intent(this@SignUpActivity, LoginUserActivity::class.java)
             startActivity(intent)
 
         }
 
-        binding.buttonCourierSgnUp.setOnClickListener {
+        binding.buttonUserSgnUp.setOnClickListener {
             val login = userLogin.text.toString().trim()
             val email = userEmail.text.toString().trim()
             val pass = userPass.text.toString().trim()
@@ -35,10 +39,10 @@ class SignUpActivityCourier : AppCompatActivity() {
             if(login == "" || email == "" || pass == "")
                 Toast.makeText(this, "Заполните все поля", Toast.LENGTH_LONG).show()
             else {
-                val courier = Courier(login, email, pass)
+                val user = User(login, email, pass)
 
                 val db = DbHelper(this, null)
-                db.addCourier(courier)
+                db.addUser(user)
                 Toast.makeText(this, "Аккаунт $login создан", Toast.LENGTH_LONG).show()
 
                 userLogin.text.clear()
@@ -47,7 +51,7 @@ class SignUpActivityCourier : AppCompatActivity() {
 
             }
 
-            val intent = Intent(this@SignUpActivityCourier, CourierActivity::class.java)
+            val intent = Intent(this@SignUpActivity, LocationActivity::class.java)
             startActivity(intent)
             finish()
         }
