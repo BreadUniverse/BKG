@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.maria.deliveryclub.CourierActivity
 import com.maria.deliveryclub.Db.DbHelper
 import com.maria.deliveryclub.R
+import com.maria.deliveryclub.StartActivity
 import com.maria.deliveryclub.databinding.ActivityLoginCourierBinding
 
 class LoginCourierActivity : AppCompatActivity() {
@@ -17,6 +18,11 @@ class LoginCourierActivity : AppCompatActivity() {
         binding = ActivityLoginCourierBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.imageLogOut.setOnClickListener {
+            val intent = Intent(this@LoginCourierActivity, StartActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val userLogin: EditText = findViewById(R.id.sign_in_courier_login)
         val userPass: EditText = findViewById(R.id.sign_in_courier_pass)

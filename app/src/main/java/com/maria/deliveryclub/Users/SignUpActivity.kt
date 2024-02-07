@@ -9,6 +9,7 @@ import com.maria.deliveryclub.Db.DbHelper
 import com.maria.deliveryclub.Db.User
 import com.maria.deliveryclub.LocationActivity
 import com.maria.deliveryclub.R
+import com.maria.deliveryclub.StartActivity
 import com.maria.deliveryclub.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
@@ -18,6 +19,12 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.imageLogOut.setOnClickListener {
+            val intent = Intent(this@SignUpActivity, StartActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val userLogin: EditText = findViewById(R.id.user_name)
         val userEmail: EditText = findViewById(R.id.sign_up_user_email)

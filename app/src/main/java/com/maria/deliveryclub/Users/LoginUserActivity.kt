@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.maria.deliveryclub.Db.DbHelper
 import com.maria.deliveryclub.MainActivity
 import com.maria.deliveryclub.R
+import com.maria.deliveryclub.StartActivity
 import com.maria.deliveryclub.databinding.ActivityLoginUserBinding
 
 class LoginUserActivity : AppCompatActivity() {
@@ -18,6 +19,11 @@ class LoginUserActivity : AppCompatActivity() {
         binding = ActivityLoginUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.imageLogOut.setOnClickListener {
+            val intent = Intent(this@LoginUserActivity, StartActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val userLogin: EditText = findViewById(R.id.sign_in_user_login)
         val userPass: EditText = findViewById(R.id.sign_in_user_pass)

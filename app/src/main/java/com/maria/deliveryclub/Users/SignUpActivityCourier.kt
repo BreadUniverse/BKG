@@ -9,6 +9,7 @@ import com.maria.deliveryclub.CourierActivity
 import com.maria.deliveryclub.Db.DbHelper
 import com.maria.deliveryclub.Db.Courier
 import com.maria.deliveryclub.R
+import com.maria.deliveryclub.StartActivity
 import com.maria.deliveryclub.databinding.ActivitySignUpCourierBinding
 
 class SignUpActivityCourier : AppCompatActivity() {
@@ -17,6 +18,12 @@ class SignUpActivityCourier : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpCourierBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.imageLogOut.setOnClickListener {
+            val intent = Intent(this@SignUpActivityCourier, StartActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val userLogin: EditText = findViewById(R.id.courier_name)
         val userEmail: EditText = findViewById(R.id.sign_up_courier_email)

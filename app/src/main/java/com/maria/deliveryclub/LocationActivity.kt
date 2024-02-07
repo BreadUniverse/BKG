@@ -41,6 +41,9 @@ class LocationActivity : AppCompatActivity() {
 
         val dialog = dialogBuilder.create()
 
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.show()
+
         dialogView.findViewById<AppCompatButton>(R.id.btn_yes).setOnClickListener {
             startActivityWithLocation(location)
             dialog.dismiss()
@@ -50,8 +53,6 @@ class LocationActivity : AppCompatActivity() {
             dialog.dismiss()
         }
 
-        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog.show()
     }
 
     private fun startActivityWithLocation(location: Long) {
